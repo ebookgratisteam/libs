@@ -184,8 +184,6 @@ function displayToc(filter) {
    var tocTable = '';
    var tocHead1 = '↑↓ Judul Postingan';
    var tocTool1 = 'Click to sort by title';
-   var tocHead2 = '↑↓ Urutkan Berdasar Tanggal Upload';
-   var tocTool2 = 'Click to sort by date';
    if (sortBy == "titleasc") { 
       tocTool1 += ' (descending)';
       tocTool2 += ' (newest first)';
