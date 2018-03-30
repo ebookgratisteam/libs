@@ -1,23 +1,3 @@
-// ---------------------------------------------------
-// BLOGTOC
-// ---------------------------------------------------
-// BlogToc creates a clickable Table Of Contents for
-// Blogger Blogs.
-// It uses the JSON post feed, and create a ToC of it.
-// The ToC can be sorted by title or by date, both
-// ascending and descending, and can be filtered by
-// label.
-// ---------------------------------------------------
-// Author: Beautiful Beta
-// Url: http://beautifulbeta.blogspot.com
-// Version: 2
-// Date: 2007-04-12
-// ---------------------------------------------------
-// Modified by Aneesh 
-// www.bloggerplugins.org
-// Date : 02-08-2011
-// global arrays
-
    var postTitle = new Array();     // array of posttitles
    var postUrl = new Array();       // array of posturls
    var postDate = new Array();      // array of post publish dates
@@ -192,14 +172,6 @@ function displayToc(filter) {
       tocTool1 += ' (ascending)';
       tocTool2 += ' (newest first)';
    }
-   if (sortBy == "dateoldest") { 
-      tocTool1 += ' (ascending)';
-      tocTool2 += ' (newest first)';
-   }
-   if (sortBy == "datenewest") { 
-      tocTool1 += ' (ascending)';
-      tocTool2 += ' (oldest first)';
-   }
    if (postFilter != '') {
       tocTool3 = 'Click to show all posts';
    }
@@ -208,7 +180,6 @@ function displayToc(filter) {
    tocTable += '<td class="toc-header-col1">';
    tocTable += '<a href="javascript:toggleTitleSort();" title="' + tocTool1 + '">' + tocHead1 + '</a>';
    tocTable += '</td>';
-   tocTable += '<td class="toc-header-col2">';
    tocTable += '</tr>';
    for (var i = 0; i < postTitle.length; i++) {
       if (filter == '') {
@@ -238,14 +209,6 @@ function toggleTitleSort() {
    sortPosts(sortBy);
    displayToc(postFilter);
 } // end toggleTitleSort
-
-function toggleDateSort() {
-   if (sortBy == "datenewest") { sortBy = "dateoldest"; }
-   else { sortBy = "datenewest"; }
-   sortPosts(sortBy);
-   displayToc(postFilter);
-} // end toggleTitleSort
-
 
 function showToc() {
   if (tocLoaded) { 
