@@ -266,4 +266,3 @@ function hideToc() {
   var toclink = document.getElementById("toclink");
   toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» Show Table of Contents</a> <img src="http://chenkaie.blog.googlepages.com/new_1.gif"/>';
 }
-© 2018 GitHub, Inc.
