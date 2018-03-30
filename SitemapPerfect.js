@@ -162,6 +162,16 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
+   var tocHead1 = 'Judul Postingan';
+   var tocTool1 = '';
+   if (sortBy == "titleasc") { 
+      tocTool1 += ' (descending)';
+      tocTool2 += ' (newest first)';
+   }
+   if (sortBy == "titledesc") { 
+      tocTool1 += ' (ascending)';
+      tocTool2 += ' (newest first)';
+   }
    if (postFilter != '') {
       tocTool3 = 'Click to show all posts';
    }
